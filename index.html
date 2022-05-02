@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!-- font awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="./style.css">
+   <title>Weather Forecast</title>
+</head>
+
+<body>
+   <!-- nave section -->
+   <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid  container">
+         <a class="navbar-brand">© 2012 — 2022 (Maruf , Atom) ® All rights reserved
+         </a>
+         <form class="d-flex">
+            <input id="inp" class="form-control me-2" type="search" placeholder="City" aria-label="Search">
+            <button class="btn btn-outline-success" id="search">Search</button>
+
+            <span title="Auto Locate" onclick="autoLocate()" id="trackLocation"><i
+                  class="fa-solid fa-location-crosshairs"></i></span>
+         </form>
+      </div>
+   </nav>
+   <!-- Nav Section ended -->
+   <!-- banner Section -->
+   <div class="page-content page-container" id="page-content">
+      <div class="padding">
+         <div class="row container d-flex justify-content-center">
+            <div class="col-lg-8 grid-margin stretch-card">
+               <!--weather card-->
+               <div class="card card-weather" id="content">
+                  <div class="card-body " id="bg">
+                     <div class="weather-date-location">
+                        <h3 id="placeName"></h3>
+
+                        <p id="weatherDate"></p>
+                     </div>
+                     <div class="weather-data d-flex">
+                        <div class="m-auto">
+                           <img id="icon"></img>
+                           <p id="description"> </p>
+                           <h4 class="display-3"><span id="temp"></span> <span class="symbol"></span></h4>
+
+                           <p class="updateTime"> <span id="updateTime"> </span><samp id="ampm"> </samp> </p>
+                        </div>
+                     </div>
+                     <div class="hourly_weathrt">
+                        <div id="weatherToday" class="row text-center d-flex justify-content-center text-white">
+
+
+
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="card-body p-0">
+                     <div class="d-flex weakly-weather" id="weakly_weather">
+
+
+
+
+                     </div>
+                  </div>
+               </div>
+               <!--weather card ends-->
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+   <script src="./script.js"></script>
+
+
+
+   <!-- Optional JavaScript; choose one of the two! -->
+   <!-- Option 1: Bootstrap Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+   <!-- Option 2: Separate Popper and Bootstrap JS -->
+   <!--
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+         -->
+</body>
+
+</html>
